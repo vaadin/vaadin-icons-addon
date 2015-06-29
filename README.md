@@ -4,7 +4,7 @@ Vaadin Icons Add-on enables easy usage of [Vaadin Icons](https://vaadin.com/font
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/vaadin-icons
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/addon/vaadin-icons-add-on
 
 ## Usage
 
