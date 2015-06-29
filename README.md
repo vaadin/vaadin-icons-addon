@@ -10,6 +10,7 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 
 * Add the add-on to your Vaadin project.
 * Download the font files from [https://vaadin.com/font-icons/download](https://vaadin.com/font-icons/download).
+* Copy the font files under `fonts` subdirectory in your theme.
 * Add following lines to your theme.
 ```
 @font-face {
