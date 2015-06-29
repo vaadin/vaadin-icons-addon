@@ -13,6 +13,7 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 * Copy the font files under `fonts` subdirectory in your theme.
 * Add following lines to your theme.
 ```
+/* This font-face declaration must be outside your theme mixin. */
 @font-face {
     font-family: 'Vaadin-Icons';
     src: url('fonts/Vaadin-Icons.eot');
