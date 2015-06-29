@@ -8,9 +8,9 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 
 ## Usage
 
-1. Add the add-on to your Vaadin project.
-2. Download the font files from [https://vaadin.com/font-icons/download](https://vaadin.com/font-icons/download).
-3. Add following lines to your theme.
+* Add the add-on to your Vaadin project.
+* Download the font files from [https://vaadin.com/font-icons/download](https://vaadin.com/font-icons/download).
+* Add following lines to your theme.
 ```
 @font-face {
     font-family: 'Vaadin-Icons';
@@ -24,7 +24,7 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 	font-family: 'Vaadin-Icons';
 }
 ```
-4. Use the icons in your code as follows.
+* Use the icons in your code as follows.
 ```
 button.setIcon(VaadinIcons.VAADIN_V);
 ```
