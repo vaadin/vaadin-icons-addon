@@ -5,7 +5,7 @@
 	<groupId>org.vaadin.icons</groupId>
 	<artifactId>vaadin-icons</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>Vaadin Icons Add-on</name>
 
 	<properties>
