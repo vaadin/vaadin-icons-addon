@@ -85,7 +85,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.vaadin.teemu</groupId>
+			<groupId>org.vaadin.icons</groupId>
 			<artifactId>vaadin-icons</artifactId>
 			<version>${version}</version>
 		</dependency>
