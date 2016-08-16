@@ -10,7 +10,7 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 
 * Add the add-on to your Vaadin project.
 * Ensure that your theme contains addons.scss and it contains the following lines.
-Updating addons.scss should happen when mvn vaadin:update-theme goal is executed.
+Updating addons.scss should happen automatically when mvn vaadin:update-theme goal is executed.
 ```
 @import "../../../VAADIN/addons/vaadin-icons/vaadin-icons.scss";
 
