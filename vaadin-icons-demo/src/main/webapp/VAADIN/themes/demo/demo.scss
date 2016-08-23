@@ -37,15 +37,4 @@ $v-font-size: 32px;
   // Insert your own theme rules here
 }
 
-@font-face {
-    font-family: 'Vaadin-Icons';
-    src: url('fonts/Vaadin-Icons.eot');
-    src: url('fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Vaadin-Icons.woff') format('woff'),
-         url('fonts/Vaadin-Icons.ttf') format('truetype'),
-         url('fonts/Vaadin-Icons.svg#icomoon') format('svg');
-}
-.Vaadin-Icons {
-	font-family: 'Vaadin-Icons';
-}
 
