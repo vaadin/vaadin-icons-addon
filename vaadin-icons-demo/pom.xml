@@ -85,9 +85,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.vaadin.icons</groupId>
+			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-icons</artifactId>
-			<version>${version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
