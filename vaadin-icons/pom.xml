@@ -23,19 +23,18 @@
 		<Vaadin-Stylesheets>VAADIN/addons/${project.artifactId}/${project.artifactId}.scss</Vaadin-Stylesheets>
 	</properties>
 
-    <!--     
-	<organization>
-		<name>My Name</name>
-		<url>https://github.com/mygithubaccount/MyComponent/</url>
-	</organization>
-    
+
 	<scm>
-		<url>git://github.com/mygithubaccount/MyComponent.git</url>
-		<connection>scm:git:git://github.com/mygithubaccount/MyComponent.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${ComponentClassName}.git</developerConnection>
-		<tag>MyComponent add-on for Vaadin</tag>
+		<url>scm:git:git@github.com/vaadin/vaadin-icons.git</url>
+		<connection>scm:git:git://github.com/vaadin/vaadin-icons.git</connection>
+<!--
+		<url>scm:git:git@github.com/enver-haase/vaadin-icons.git</url>
+		<connection>scm:git:git://github.com/enver-haase/vaadin-icons.git</connection>
+-->
+		<tag>Vaadin Icons Repository</tag>
 	</scm>
 
+    <!--
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/mygithubaccount/MyComponent/issues</url>
@@ -104,6 +103,71 @@
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.9.5</version>
+				<configuration>
+					<scmVersion>v2.0.0</scmVersion>
+					<scmVersionType>tag</scmVersionType>
+				</configuration>
+				<executions>
+					<execution>
+						<id>fetch-fonts</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>checkout</goal>
+						</goals>
+						<configuration>
+							<checkoutDirectory>${basedir}/checkout</checkoutDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</outputDirectory>
+							<resources>          
+								<resource>
+									<directory>${basedir}/checkout/assets/fonts</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>              
+						</configuration>            
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/checkout</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</directory>
+							<excludes>
+								<include>.readme</include>
+							</excludes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
