@@ -1,0 +1,2 @@
+This hidden file is here to have Git keep the directory (cannot handle empty ones).
+The actual font files are copied here from a remote repository during build time.
