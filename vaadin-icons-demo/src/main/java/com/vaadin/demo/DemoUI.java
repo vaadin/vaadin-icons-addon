@@ -1,8 +1,8 @@
-package org.vaadin.teemu.demo;
+package com.vaadin.demo;
 
 import javax.servlet.annotation.WebServlet;
 
-import org.vaadin.teemu.VaadinIcons;
+import com.vaadin.VaadinIcons;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;

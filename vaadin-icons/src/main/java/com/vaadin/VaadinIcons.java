@@ -1,4 +1,4 @@
-package org.vaadin.teemu;
+package com.vaadin;
 
 import com.vaadin.server.FontIcon;
 
