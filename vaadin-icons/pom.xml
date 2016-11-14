@@ -23,18 +23,6 @@
 		<Vaadin-Stylesheets>VAADIN/addons/${project.artifactId}/${project.artifactId}.scss</Vaadin-Stylesheets>
 	</properties>
 
-
-	<scm>
-		<url>scm:git:git@github.com/vaadin/vaadin-icons-addon.git</url>
-		<connection>scm:git:git://github.com/vaadin/vaadin-icons-addon.git</connection>
-		<tag>Vaadin Icons Add-on Repository</tag>
-	</scm>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/vaadin/vaadin-icons-addon/issues</url>
-	</issueManagement>
-
 	<licenses>
 		<license>
 			<name>Apache 2</name>
@@ -97,29 +85,6 @@
 
 	<build>
 		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.9.5</version>
-				<configuration>
-					<scmVersion>v2.0.0</scmVersion>
-					<scmVersionType>tag</scmVersionType>
-				</configuration>
-				<executions>
-					<execution>
-						<id>fetch-fonts</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>checkout</goal>
-						</goals>
-						<configuration>
-							<checkoutDirectory>${basedir}/checkout</checkoutDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.0.1</version>
@@ -134,7 +99,7 @@
 							<outputDirectory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</outputDirectory>
 							<resources>          
 								<resource>
-									<directory>${basedir}/checkout/assets/fonts</directory>
+									<directory>${basedir}/vaadin-icons-webcomponent/assets/fonts</directory>
 									<filtering>false</filtering>
 								</resource>
 							</resources>              

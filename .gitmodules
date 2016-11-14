@@ -1,0 +1,3 @@
+[submodule "vaadin-icons/vaadin-icons-webcomponent"]
+	path = vaadin-icons/vaadin-icons-webcomponent
+	url = git@github.com:vaadin/vaadin-icons.git

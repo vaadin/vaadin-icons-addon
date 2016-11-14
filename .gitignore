@@ -3,4 +3,6 @@
 .classpath
 target
 bin
-**/styles.scss.cache
+styles.scss.cache
+styles.css
+addons.scss
