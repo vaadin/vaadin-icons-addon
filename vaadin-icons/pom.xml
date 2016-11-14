@@ -25,21 +25,15 @@
 
 
 	<scm>
-		<url>scm:git:git@github.com/vaadin/vaadin-icons.git</url>
-		<connection>scm:git:git://github.com/vaadin/vaadin-icons.git</connection>
-<!--
-		<url>scm:git:git@github.com/enver-haase/vaadin-icons.git</url>
-		<connection>scm:git:git://github.com/enver-haase/vaadin-icons.git</connection>
--->
-		<tag>Vaadin Icons Repository</tag>
+		<url>scm:git:git@github.com/vaadin/vaadin-icons-addon.git</url>
+		<connection>scm:git:git://github.com/vaadin/vaadin-icons-addon.git</connection>
+		<tag>Vaadin Icons Add-on Repository</tag>
 	</scm>
 
-    <!--
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/mygithubaccount/MyComponent/issues</url>
+		<url>https://github.com/vaadin/vaadin-icons-addon/issues</url>
 	</issueManagement>
-    -->
 
 	<licenses>
 		<license>
@@ -194,7 +188,7 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-                            <Vaadin-Stylesheets>${Vaadin-Stylesheets}</Vaadin-Stylesheets>
+ 							<Vaadin-Stylesheets>${Vaadin-Stylesheets}</Vaadin-Stylesheets>
 						</manifestEntries>
 					</archive>
 				</configuration>
