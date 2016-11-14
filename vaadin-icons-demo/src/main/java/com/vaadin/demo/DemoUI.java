@@ -2,7 +2,7 @@ package com.vaadin.demo;
 
 import javax.servlet.annotation.WebServlet;
 
-import com.vaadin.VaadinIcons;
+import com.vaadin.icons.VaadinIcons;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;

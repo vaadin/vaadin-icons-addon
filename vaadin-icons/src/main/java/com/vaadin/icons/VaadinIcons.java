@@ -1,4 +1,4 @@
-package com.vaadin;
+package com.vaadin.icons;
 
 import com.vaadin.server.FontIcon;
 
