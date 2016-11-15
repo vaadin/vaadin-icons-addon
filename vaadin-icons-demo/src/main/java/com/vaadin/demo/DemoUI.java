@@ -10,7 +10,8 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
@@ -30,9 +31,11 @@ public class DemoUI extends UI {
         layout.setSizeFull();
         setContent(layout);
 
-        Button button = new Button("Click Me", VaadinIcons.VAADIN_V);
-        layout.addComponent(button);
-        layout.setComponentAlignment(button, Alignment.MIDDLE_CENTER);
+        String allIcons = "";
+        for (VaadinIcons ic : VaadinIcons.values()) {
+            allIcons += ic.getHtml() + "&nbsp;";
+        }
+        layout.addComponent(new Label(allIcons, ContentMode.HTML));
     }
 
 }
