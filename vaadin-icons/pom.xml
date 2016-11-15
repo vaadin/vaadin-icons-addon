@@ -101,13 +101,13 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</outputDirectory>
-							<resources>          
+							<resources>
 								<resource>
 									<directory>${basedir}/vaadin-icons-webcomponent/assets/fonts</directory>
 									<filtering>false</filtering>
 								</resource>
-							</resources>              
-						</configuration>            
+							</resources>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -219,7 +219,7 @@
 			</plugin>
 		</plugins>
 
-		<!-- This is needed for the sources required by the client-side compiler to be 
+		<!-- This is needed for the sources required by the client-side compiler to be
 			included in the produced JARs -->
 		<resources>
 			<resource>
