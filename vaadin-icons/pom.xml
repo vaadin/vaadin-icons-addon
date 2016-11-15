@@ -30,6 +30,10 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<organization>
+		<name>Vaadin</name>
+		<url>https://vaadin.com/</url>
+	</organization>
 
 	<repositories>
 		<repository>
