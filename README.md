@@ -9,21 +9,15 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 ## Usage
 
 * Add the add-on to your Vaadin project.
-* Download the font files from [https://vaadin.com/font-icons/download](https://vaadin.com/font-icons/download).
-* Copy the font files under `fonts` subdirectory in your theme.
-* Add following lines to your theme.
+* Ensure that your theme contains addons.scss and it contains the following lines.
+These lines should appear automatically in addons.scss when mvn vaadin:update-theme goal is executed.
 ```
-/* This font-face declaration must be outside your theme mixin. */
-@font-face {
-    font-family: 'Vaadin-Icons';
-    src: url('fonts/Vaadin-Icons.eot');
-    src: url('fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Vaadin-Icons.woff') format('woff'),
-         url('fonts/Vaadin-Icons.ttf') format('truetype'),
-         url('fonts/Vaadin-Icons.svg#icomoon') format('svg');
-}
-.Vaadin-Icons {
-	font-family: 'Vaadin-Icons';
+@import "../../../VAADIN/addons/vaadin-icons/vaadin-icons.scss";
+
+
+/* Import and include this mixin into your project theme to include the addon themes */
+@mixin addons {
+	@include vaadin-icons;
 }
 ```
 * Use the icons in your code as follows.

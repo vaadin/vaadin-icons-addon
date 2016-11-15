@@ -1,7 +1,7 @@
 // Global variable overrides. Must be declared before importing Valo.
 
 // Defines the plaintext font size, weight and family. Font size affects general component sizing.
-$v-font-size: 32px;
+$v-font-size: 16px;
 //$v-font-weight: 300;
 //$v-font-family: "Open Sans", sans-serif;
 
@@ -29,23 +29,8 @@ $v-font-size: 32px;
 
 @import "../valo/valo.scss";
 
-
-
 @mixin demo {
   @include valo;
 
   // Insert your own theme rules here
 }
-
-@font-face {
-    font-family: 'Vaadin-Icons';
-    src: url('fonts/Vaadin-Icons.eot');
-    src: url('fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Vaadin-Icons.woff') format('woff'),
-         url('fonts/Vaadin-Icons.ttf') format('truetype'),
-         url('fonts/Vaadin-Icons.svg#icomoon') format('svg');
-}
-.Vaadin-Icons {
-	font-family: 'Vaadin-Icons';
-}
-

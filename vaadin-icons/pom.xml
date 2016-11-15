@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.vaadin.icons</groupId>
+	<groupId>com.vaadin</groupId>
 	<artifactId>vaadin-icons</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1</version>
+	<version>2.0.0</version>
 	<name>Vaadin Icons Add-on</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.5.0</vaadin.version>
+		<vaadin.version>7.7.3</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 
 		<!-- ZIP Manifest fields -->
@@ -19,27 +19,9 @@
 		<Implementation-Title>${project.name}</Implementation-Title>
 		<Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
 		<Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
-		<Vaadin-Addon>${artifactId}-${project.version}.jar</Vaadin-Addon>
+		<Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
+		<Vaadin-Stylesheets>VAADIN/addons/${project.artifactId}/${project.artifactId}.scss</Vaadin-Stylesheets>
 	</properties>
-
-    <!--     
-	<organization>
-		<name>My Name</name>
-		<url>https://github.com/mygithubaccount/MyComponent/</url>
-	</organization>
-    
-	<scm>
-		<url>git://github.com/mygithubaccount/MyComponent.git</url>
-		<connection>scm:git:git://github.com/mygithubaccount/MyComponent.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:/mygithubaccount/${ComponentClassName}.git</developerConnection>
-		<tag>MyComponent add-on for Vaadin</tag>
-	</scm>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/mygithubaccount/MyComponent/issues</url>
-	</issueManagement>
-    -->
 
 	<licenses>
 		<license>
@@ -48,6 +30,10 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<organization>
+		<name>Vaadin</name>
+		<url>https://vaadin.com/</url>
+	</organization>
 
 	<repositories>
 		<repository>
@@ -103,6 +89,48 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/vaadin-icons-webcomponent/assets/fonts</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/checkout</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>${basedir}/src/main/resources/VAADIN/addons/vaadin-icons/fonts/</directory>
+							<excludes>
+								<include>.readme</include>
+							</excludes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -129,6 +157,7 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
+ 							<Vaadin-Stylesheets>${Vaadin-Stylesheets}</Vaadin-Stylesheets>
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -190,7 +219,7 @@
 			</plugin>
 		</plugins>
 
-		<!-- This is needed for the sources required by the client-side compiler to be 
+		<!-- This is needed for the sources required by the client-side compiler to be
 			included in the produced JARs -->
 		<resources>
 			<resource>
