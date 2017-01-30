@@ -1,4 +1,4 @@
-# Vaadin Icons Add-on for Vaadin 7
+# Vaadin Icons Add-on for Vaadin 8
 
 Vaadin Icons Add-on enables easy usage of [Vaadin Icons](https://vaadin.com/font-icons) in your Vaadin application.
 
@@ -8,23 +8,10 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 
 ## Usage
 
-* Add the add-on to your Vaadin project.
-* Ensure that your theme contains addons.scss and it contains the following lines.
-These lines should appear automatically in addons.scss when mvn vaadin:update-theme goal is executed.
-```
-@import "../../../VAADIN/addons/vaadin-icons/vaadin-icons.scss";
-
-
-/* Import and include this mixin into your project theme to include the addon themes */
-@mixin addons {
-	@include vaadin-icons;
-}
-```
-* Use the icons in your code as follows.
+Use the icons in your code as follows.
 ```
 button.setIcon(VaadinIcons.VAADIN_V);
 ```
-
 
 ## License & Author
 

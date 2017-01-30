@@ -1,3 +1,4 @@
+vaadin-icons/src/main/resources/VAADIN/addons/vaadin-icons/fonts/Vaadin-Icons.*
 .project
 .settings
 .classpath
@@ -6,3 +7,6 @@ bin
 styles.scss.cache
 styles.css
 addons.scss
+*.iml
+.idea
+
