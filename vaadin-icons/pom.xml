@@ -12,7 +12,7 @@
 	<groupId>com.vaadin</groupId>
 	<artifactId>vaadin-icons</artifactId>
 	<packaging>jar</packaging>
-	<version>3.0.0</version>
+	<version>3.0.1</version>
 	<name>Vaadin Icons Add-on</name>
 
 	<properties>
