@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadin-icons-add-on)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/vaadin-icons-add-on.svg)](https://vaadin.com/directory/component/vaadin-icons-add-on)
+
 # Vaadin Icons Add-on for Vaadin 8
 
 Vaadin Icons Add-on enables easy usage of [Vaadin Icons](https://vaadin.com/font-icons) in your Vaadin application.
