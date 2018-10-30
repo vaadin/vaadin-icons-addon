@@ -5,7 +5,7 @@
 	<groupId>com.vaadin</groupId>
 	<artifactId>vaadin-icons-root</artifactId>
 	<packaging>pom</packaging>
-	<version>3.0.1</version>
+	<version>3.0.2</version>
 	<name>Vaadin Icons Add-on Root Project</name>
 
 	<modules>
