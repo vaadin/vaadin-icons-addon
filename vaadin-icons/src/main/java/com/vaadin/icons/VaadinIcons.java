@@ -19,13 +19,15 @@ import com.vaadin.server.FontIcon;
 
 /**
  * {@link FontIcon} that represents the <a
- * href="https://vaadin.com/vaadin-icons">Vaadin Icons font</a>.
+ * href="https://vaadin.com/components/vaadin-icons/html-examples/icons-basic-demos">
+ * Vaadin Icons font</a>. Read the Vaadin Documentation on <a
+ * href="https://vaadin.com/docs/v8/framework/themes/themes-fonticon.html">Font
+ * Icons</a> for more information on how to use the icons with your app.
  * 
  * @author Teemu Pöntelin, Vaadin Ltd (add-on)
  * @author Jarmo Kemppainen, Vaadin Ltd (font)
  *
- */
-public enum VaadinIcons implements FontIcon {
+ */public enum VaadinIcons implements FontIcon {
 
     ABACUS(0xE682),
     ABSOLUTE_POSITION(0xE61E),
