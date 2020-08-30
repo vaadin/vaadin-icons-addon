@@ -331,7 +331,7 @@ public enum VaadinIcons implements FontIcon {
     FORM(0xE64B),
     FORWARD(0xE77C),
     FROWN_O(0xE6A4),
-    FUNCION(0xE64C),
+    FUNCTION(0xE64C),
     FUNNEL(0XE931),
     GAMEPAD(0xE714),
     GAVEL(0xE6A5),
